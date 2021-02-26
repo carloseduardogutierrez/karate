@@ -4,7 +4,7 @@ Feature: Test with a Get Method on The Star Wars API
     * url 'https://swapi.dev/api'
     * header Content-Type = 'application/json; charset=utf-8'
 
-  Scenario: first hello world
+  Scenario: first example with a file
 
     * def expectedOutput = read('response/getResponse.json')
 
