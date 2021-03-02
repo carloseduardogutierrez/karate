@@ -23,8 +23,10 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+	// Report
 	implementation ("net.masterthought:cucumber-reporting:5.5.2")
 
+	// libraries to use karate
 	implementation("com.intuit.karate:karate-apache:${property("karateVersion")}")
 	implementation("com.intuit.karate:karate-junit5:${property("karateVersion")}")
 

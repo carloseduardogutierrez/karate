@@ -15,3 +15,4 @@ Feature: Test with a Get Method
     Then status 200
     Then match foo !contains { bar: 2 }
     Then match foo !contains { huh: '#notnull' }
+    Then match response.url contains 'https://postman-echo.com/get?foo1=bar1&foo2=bar2'
