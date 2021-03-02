@@ -23,6 +23,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
+	implementation ("net.masterthought:cucumber-reporting:5.5.2")
+
 	implementation("com.intuit.karate:karate-apache:${property("karateVersion")}")
 	implementation("com.intuit.karate:karate-junit5:${property("karateVersion")}")
 
@@ -32,7 +34,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "11"
+		jvmTarget = JavaVersion.VERSION_11.toString()
 	}
 }
 
