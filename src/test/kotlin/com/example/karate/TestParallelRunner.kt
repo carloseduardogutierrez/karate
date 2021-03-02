@@ -26,7 +26,7 @@ class TestParallelRunner {
         val jsonFiles: Collection<File> = FileUtils.listFiles(File(karateOutputPath), arrayOf("json"), true)
         val jsonPaths: MutableList<String> = ArrayList(jsonFiles.size)
         jsonFiles.forEach(Consumer { file: File -> jsonPaths.add(file.absolutePath) })
-        val config = Configuration(File("target"), "demo")
+        val config = Configuration(File("target"), "karate")
         val reportBuilder = ReportBuilder(jsonPaths, config)
         reportBuilder.generateReports()
     }
