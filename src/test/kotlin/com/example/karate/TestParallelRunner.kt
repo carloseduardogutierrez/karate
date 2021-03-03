@@ -12,7 +12,7 @@ import java.io.File
 import java.util.ArrayList
 import java.util.function.Consumer
 
-@KarateOptions(tags = ["~@ignore"])
+//@KarateOptions(tags = ["~@ignore"])
 class TestParallelRunner {
 
     @Test

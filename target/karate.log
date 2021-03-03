@@ -1,0 +1,90 @@
+09:31:34.313 [Test worker] INFO  com.intuit.karate.Runner - waiting for parallel features to complete ...
+09:31:34.675 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - request:
+1 > GET https://postman-echo.com/get?foo1=bar1&foo2=bar2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: application/json; charset=utf-8
+1 > Host: postman-echo.com
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/13.0.1)
+
+09:31:34.675 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+1 > GET https://swapi.dev/api/people/1?foo1=bar1&foo2=bar2
+1 > Accept-Encoding: gzip,deflate
+1 > Connection: Keep-Alive
+1 > Content-Type: application/json; charset=utf-8
+1 > Host: swapi.dev
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/13.0.1)
+
+09:31:35.807 [ForkJoinPool-1-worker-5] DEBUG com.intuit.karate - response time in milliseconds: 1124.75
+1 < 200
+1 < Connection: keep-alive
+1 < Content-Length: 383
+1 < Content-Type: application/json; charset=utf-8
+1 < Date: Wed, 03 Mar 2021 12:31:35 GMT
+1 < ETag: W/"17f-Rozy+62l7GVbvOO4mbR3aM4/5oo"
+1 < Vary: Accept-Encoding
+1 < set-cookie: sails.sid=s%3AG-YTLFJ_QmJBJoSKZFN9AWrOY_XNdQsn.JGj9y%2BImC7ACjoW4cK9%2FBr13Swi6g%2BZ1HeTSpNJ%2BYtQ; Path=/; HttpOnly
+{"args":{"foo1":"bar1","foo2":"bar2"},"headers":{"x-forwarded-proto":"https","x-forwarded-port":"443","host":"postman-echo.com","x-amzn-trace-id":"Root=1-603f81a7-3824d8490ef8083513fc5cae","content-type":"application/json; charset=utf-8","user-agent":"Apache-HttpClient/4.5.13 (Java/13.0.1)","accept-encoding":"gzip,deflate"},"url":"https://postman-echo.com/get?foo1=bar1&foo2=bar2"}
+
+09:31:35.842 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 1163.78
+1 < 301
+1 < Connection: keep-alive
+1 < Content-Type: text/html; charset=utf-8
+1 < Date: Wed, 03 Mar 2021 12:31:35 GMT
+1 < ETag: "d41d8cd98f00b204e9800998ecf8427e"
+1 < Location: http://swapi.dev/api/people/1/?foo1=bar1&foo2=bar2
+1 < Server: nginx/1.16.1
+1 < Strict-Transport-Security: max-age=15768000
+1 < Transfer-Encoding: chunked
+1 < X-Frame-Options: SAMEORIGIN
+
+
+09:31:35.844 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+2 > GET https://swapi.dev/api/people/1?foo1=bar1&foo2=bar2
+2 > Accept-Encoding: gzip,deflate
+2 > Connection: Keep-Alive
+2 > Content-Type: application/json; charset=utf-8
+2 > Host: swapi.dev
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/13.0.1)
+
+09:31:35.884 [pool-1-thread-2] INFO  com.intuit.karate.Runner - <<pass>> feature 2 of 2: classpath:com/example/karate/getMethod.feature
+09:31:36.494 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 648.27
+2 < 301
+2 < Connection: keep-alive
+2 < Content-Length: 169
+2 < Content-Type: text/html
+2 < Date: Wed, 03 Mar 2021 12:31:36 GMT
+2 < Location: https://swapi.dev/api/people/1/?foo1=bar1&foo2=bar2
+2 < Server: nginx/1.16.1
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body>
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx/1.16.1</center>
+</body>
+</html>
+
+
+09:31:36.499 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - request:
+3 > GET https://swapi.dev/api/people/1?foo1=bar1&foo2=bar2
+3 > Accept-Encoding: gzip,deflate
+3 > Connection: Keep-Alive
+3 > Content-Type: application/json; charset=utf-8
+3 > Host: swapi.dev
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/13.0.1)
+
+09:31:36.801 [ForkJoinPool-1-worker-3] DEBUG com.intuit.karate - response time in milliseconds: 298.89
+3 < 200
+3 < Allow: GET, HEAD, OPTIONS
+3 < Connection: keep-alive
+3 < Content-Type: application/json
+3 < Date: Wed, 03 Mar 2021 12:31:36 GMT
+3 < ETag: "bf44153838a0871ffc5cc3aaee8029d0"
+3 < Server: nginx/1.16.1
+3 < Strict-Transport-Security: max-age=15768000
+3 < Transfer-Encoding: chunked
+3 < Vary: Accept, Cookie
+3 < X-Frame-Options: SAMEORIGIN
+{"name":"Luke Skywalker","height":"172","mass":"77","hair_color":"blond","skin_color":"fair","eye_color":"blue","birth_year":"19BBY","gender":"male","homeworld":"http://swapi.dev/api/planets/1/","films":["http://swapi.dev/api/films/1/","http://swapi.dev/api/films/2/","http://swapi.dev/api/films/3/","http://swapi.dev/api/films/6/"],"species":[],"vehicles":["http://swapi.dev/api/vehicles/14/","http://swapi.dev/api/vehicles/30/"],"starships":["http://swapi.dev/api/starships/12/","http://swapi.dev/api/starships/22/"],"created":"2014-12-09T13:50:51.644000Z","edited":"2014-12-20T21:17:56.891000Z","url":"http://swapi.dev/api/people/1/"}
+
+09:31:36.810 [pool-1-thread-1] INFO  com.intuit.karate.Runner - <<pass>> feature 1 of 2: classpath:com/example/karate/getMethod2.feature
